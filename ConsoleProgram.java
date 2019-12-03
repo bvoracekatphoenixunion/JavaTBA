@@ -9,7 +9,7 @@ public class ConsoleProgram{
         String mainClassName = "MyProgram";
 
         try{
-            Class mainClass = Class.forName(mainClassName);
+            Class<?> mainClass = Class.forName(mainClassName);
             Object obj = mainClass.newInstance();
             ConsoleProgram program = (ConsoleProgram)obj;
             program.run();
