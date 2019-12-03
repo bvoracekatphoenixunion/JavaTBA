@@ -32,7 +32,7 @@ public class Player {
     
     public void setFightOption(Option option)
     {
-        this.fightOption = fightOption;
+        this.fightOption = option;
     }
     
     public Option getFightOption() 

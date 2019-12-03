@@ -13,7 +13,7 @@
 */
 
 public class World extends ConsoleProgram {
-    Location[][] myWorld = new Location[5][5];
+    Location[][] myWorld = new Location[3][3];
     Player player;
     Location startingLocation;
 
@@ -26,54 +26,50 @@ public class World extends ConsoleProgram {
         */
         
         //location 0,0
-        Location location1 = new Location();
-        int[] coordinates1 = {0,0};
-        Option option1 = new Option();
-        option1.add("north");
-        option1.add("east");
-        location1.setCoordinates(coordinates1);
-        location1.setOption(option1);
-        location1.setText("Welcome to Mr. V's adventure!");
-        this.addLocation(location1);
+        Location location00 = new Location();
+        int[] coordinates00 = {0,0};
+        Option option00 = new Option();
+        option00.add("north");
+        option00.add("east");
+        location00.setCoordinates(coordinates00);
+        location00.setOption(option00);
+        location00.setText("Welcome to Mr. V's adventure!");
+        this.addLocation(location00);
         
         //location 0,1
-        Location location2 = new Location();
-        int[] coordinates2 = {0,1};
-        Option option2 = new Option();
+        Location location01 = new Location();
+        int[] coordinates01 = {0,1};
+        Option option01 = new Option();
         Enemy robot = new Enemy();
-        option2.add("north");
-        option2.add("south");
-        option2.add("east");
-        option2.add("fight");
-        location2.setCoordinates(coordinates2);
-        location2.setOption(option2);
-        location2.setText("north of starting point");
-        location2.setEnemy(robot);
-        this.addLocation(location2);
+        option01.add("north");
+        option01.add("south");
+        option01.add("east");
+        option01.add("fight");
+        location01.setCoordinates(coordinates01);
+        location01.setOption(option01);
+        location01.setText("north of starting point");
+        location01.setEnemy(robot);
+        this.addLocation(location01);
         
         //location 0,2
-        //location 0,3
-        //location 0,4
-        
+        Location location02 = new Location();
+        int[] coordinates02 = {0,2};
+        Option option02 = new Option();
+        option02.add("south");
+        location02.setCoordinates(coordinates02);
+        location02.setOption(option02);
+        location02.setText("a dead end");
+        this.addLocation(location02);
+
         //location 1,0
         //location 1,1
         //location 1,2
-        //location 1,3
-        //location 1,4
         
-        //location 3,0
-        //location 3,1
-        //location 3,2
-        //location 3,3
-        //location 3,4
+        //location 2,0
+        //location 2,1
+        //location 2,2
         
-        //location 4,0
-        //location 4,1
-        //location 4,2
-        //location 4,3
-        //location 4,4
-        
-        this.startingLocation = location1;
+        this.startingLocation = location00;
     }
     
     public void setPlayer(Player player)
