@@ -5,14 +5,8 @@ public class ConsoleProgram{
     private Scanner scanner;
 
     public static void main(String[] args){
-        // Assume the class name is passed in as the first argument.
 
-        if(args.length == 0){
-            System.out.println("Please provide the name of the main class as an argument.");
-            return;
-        }
-
-        String mainClassName = args[0];
+        String mainClassName = "MyProgram";
 
         try{
             Class mainClass = Class.forName(mainClassName);
